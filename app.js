@@ -22,9 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 grabber();
 
 //модуль ридер
-app.get('/', (req, res) => {
-	reader(res);
-});
+app.get('/', (req, res) => reader(res));
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
